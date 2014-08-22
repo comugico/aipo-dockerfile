@@ -1,0 +1,8 @@
+[Unit]
+Description=Aipo Docker
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a "aipo-dockerfile"
+ExecStop=/usr/bin/docker stop --time=1 "aipo-dockerfile"
