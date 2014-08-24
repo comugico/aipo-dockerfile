@@ -8,7 +8,7 @@ mv "./aipo" /opt
 popd
 
 rm "downloaded.tar.gz"
-rmdir "aipo7020aja_linux"
+rm -rf "aipo7020aja_linux"
 
 tree .
 
