@@ -1,5 +1,7 @@
 FROM centos:centos6
 
+VOLUME /opt/aipo
+
 RUN yum update -y
 RUN yum install -y make gcc readline-devel zlib-devel nmap
 RUN yum install -y wget tar tree sudo
