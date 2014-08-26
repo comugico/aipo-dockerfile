@@ -1,5 +1,5 @@
 #!/bin/bash
-pushd /opt
+pushd /opt/aipo-tmp
 
 tar -xvzf "downloaded.tar.gz"
 pushd "aipo7020aja_linux"
@@ -10,10 +10,10 @@ popd
 rm "downloaded.tar.gz"
 rm -rf "aipo7020aja_linux"
 
-tree .
-
-pushd "./aipo/bin"
+pushd "/opt/aipo/bin"
 sh installer.sh
 popd
+
+rm -rf /opt/aipo-tmp
 
 popd

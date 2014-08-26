@@ -9,9 +9,11 @@ RUN yum install -y wget tar tree sudo
 ADD sudoers /etc/sudoers.d/01_docker
 RUN chmod 0440 /etc/sudoers.d/01_docker
 
-RUN wget "http://iij.dl.sourceforge.jp/aipo/60038/aipo7020aja_linux64.tar.gz" -O "/opt/downloaded.tar.gz"
-ADD install.sh /opt/aipo-install.sh
-RUN source /opt/aipo-install.sh
+RUN mkdir /opt/aipo-tmp
+
+RUN wget "http://iij.dl.sourceforge.jp/aipo/60038/aipo7020aja_linux64.tar.gz" -O "/opt/aipo-tmp/downloaded.tar.gz"
+ADD install.sh /opt/aipo-tmp/aipo-install.sh
+RUN source /opt/aipo-tmp/aipo-install.sh
 
 EXPOSE 80
 WORKDIR /opt/aipo
