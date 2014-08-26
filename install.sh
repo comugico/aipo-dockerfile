@@ -4,7 +4,7 @@ pushd /opt/aipo-tmp
 tar -xvzf "downloaded.tar.gz"
 pushd "aipo7020aja_linux"
 tar -xvzf "aipo7020.tar.gz"
-mv "./aipo" /opt
+mv "./aipo/*" /opt/aipo/
 popd
 
 rm "downloaded.tar.gz"
